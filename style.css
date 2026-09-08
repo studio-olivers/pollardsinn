@@ -9,7 +9,7 @@
   --font-heading: "Cinzel", Georgia, "Times New Roman", serif;
   --font-body: "PT Serif", Georgia, "Times New Roman", serif;
 
-  --logo-max: 420px;
+  --logo-max: 540px;
 }
 
 *,
@@ -48,7 +48,7 @@ body {
 
 .inner {
   width: 100%;
-  max-width: 620px;
+  max-width: 680px;
   text-align: center;
 }
 
@@ -121,7 +121,7 @@ body {
   }
 
   .logo {
-    max-width: 300px;
+    max-width: 320px;
   }
 
   .headline {
