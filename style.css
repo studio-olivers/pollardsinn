@@ -1,0 +1,155 @@
+/* ---------------------------------------------------------
+   Pollards Inn, Willaston — coming soon
+   --------------------------------------------------------- */
+
+:root {
+  --stone: #dfded5;
+  --charcoal: #282828;
+
+  --font-heading: "Cinzel", Georgia, "Times New Roman", serif;
+  --font-body: "PT Serif", Georgia, "Times New Roman", serif;
+
+  --logo-max: 420px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100svh;
+  background-color: var(--stone);
+  color: var(--charcoal);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Layout ------------------------------------------------- */
+
+.stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: 3rem 1.5rem;
+}
+
+.inner {
+  width: 100%;
+  max-width: 620px;
+  text-align: center;
+}
+
+/* Logo --------------------------------------------------- */
+
+.logo {
+  display: block;
+  width: 100%;
+  max-width: var(--logo-max);
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Type --------------------------------------------------- */
+
+.headline {
+  margin: 3.25rem 0 0;
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: clamp(1.05rem, 3.2vw, 1.4rem);
+  line-height: 1.3;
+  text-transform: uppercase;
+  letter-spacing: 0.32em;
+  /* optical centring against the tracking on the last letter */
+  text-indent: 0.32em;
+}
+
+/* Hairline rule between the headline and the recruiting line */
+.headline::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 1px;
+  margin: 1.75rem auto 0;
+  background-color: rgba(40, 40, 40, 0.28);
+  text-indent: 0;
+}
+
+.lede {
+  margin: 1.75rem auto 0;
+  max-width: 34ch;
+  font-size: clamp(1rem, 2.4vw, 1.125rem);
+  letter-spacing: 0.01em;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+/* A link can be dropped straight into .lede later ---------- */
+
+.lede a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(40, 40, 40, 0.4);
+  padding-bottom: 0.1em;
+  transition: border-color 0.2s ease;
+}
+
+.lede a:hover,
+.lede a:focus-visible {
+  border-bottom-color: var(--charcoal);
+}
+
+/* Small screens ------------------------------------------ */
+
+@media (max-width: 480px) {
+  .stage {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .logo {
+    max-width: 300px;
+  }
+
+  .headline {
+    margin-top: 2.5rem;
+    letter-spacing: 0.26em;
+    text-indent: 0.26em;
+  }
+}
+
+/* Motion --------------------------------------------------- */
+
+@media (prefers-reduced-motion: no-preference) {
+  .inner > * {
+    animation: rise 0.9s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+  }
+
+  .logo      { animation-delay: 0.05s; }
+  .headline  { animation-delay: 0.2s; }
+  .lede      { animation-delay: 0.35s; }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
