@@ -1,7 +1,6 @@
 /* ============================================
-   The Bulls Head at Davenham - Static Site
+   Pollards Inn, Willaston - Static Site
    Fonts: Playfair Display (headings), Inter (body)
-   Palette: sage #7a8560, cream #f4efe6, navy #1f2a3a, ochre #b87333
    ============================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
@@ -10,18 +9,20 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --sage: #5E614A;
-  --sage-dark: #464836;
-  --sage-light: #7c7f64;
-  --cream: #F4EEE7;
-  --cream-dark: #E8DFCF;
-  --navy: #191D24;
-  --navy-soft: #2a2f38;
-  --ochre: #C19D61;
-  --ochre-dark: #9e7e48;
-  --text-body: #3a3e47;
-  --text-light: #6a6f79;
-  --rule: rgba(25, 29, 36, 0.12);
+  /* Olive and gold, sampled from the Pollards menus:
+     #787c61 is the steaks panel, #b19769 the wordmark. */
+  --sage: #5E6149;
+  --sage-dark: #464936;
+  --sage-light: #787C61;
+  --cream: #F4EFE7;
+  --cream-dark: #DFDED5;
+  --navy: #22251E;
+  --navy-soft: #343830;
+  --ochre: #B19769;
+  --ochre-dark: #8F7949;
+  --text-body: #3C3F36;
+  --text-light: #686B5F;
+  --rule: rgba(34, 37, 30, 0.14);
   --white: #ffffff;
   --font-heading: 'Cinzel', Georgia, serif;
   --font-body: 'PT Serif', Georgia, serif;
@@ -623,7 +624,7 @@ ul { list-style: none; }
   margin-bottom: 40px;
 }
 
-/* The embed ships its own "Welcome to The Bull's Head!" h1; the section heading
+/* The embed ships its own "Welcome to Pollards Inn!" h1; the section heading
    above the form already does that job, and a second h1 on the page hurts more
    than it helps. */
 .formbh .heading { display: none; }
