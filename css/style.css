@@ -250,7 +250,7 @@ ul { list-style: none; }
 .hero {
   position: relative;
   min-height: 100vh;
-  background: linear-gradient(rgba(51, 48, 43, 0.5), rgba(51, 48, 43, 0.6)), url('../assets/gallery/pub-1.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(51, 48, 43, 0.66), rgba(51, 48, 43, 0.76)), url('../assets/images/exterior-front.avif') center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -312,7 +312,7 @@ ul { list-style: none; }
    ============================================ */
 .page-hero {
   height: 320px;
-  background: linear-gradient(rgba(51, 48, 43, 0.6), rgba(51, 48, 43, 0.7)), url('../assets/gallery/pub-2.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(51, 48, 43, 0.30), rgba(51, 48, 43, 0.88)), url('../assets/images/exterior-garden-side.webp') center/cover no-repeat;
   display: flex;
   align-items: flex-end;
   padding: 0 24px 56px;
@@ -420,6 +420,15 @@ ul { list-style: none; }
   gap: 64px;
   align-items: center;
 }
+
+/* For a split whose photo has not arrived yet. Drop the modifier and the
+   media column comes back. */
+.feature-split--solo {
+  grid-template-columns: 1fr;
+  max-width: 760px;
+  margin: 0 auto;
+}
+.feature-split--solo .feature-split__media { display: none; }
 
 .feature-split--reverse .feature-split__media { order: 2; }
 
@@ -909,7 +918,7 @@ body.lightbox-open { overflow: hidden; }
 .testimonial {
   text-align: center;
   padding: 96px 0;
-  background: linear-gradient(rgba(51, 48, 43, 0.82), rgba(51, 48, 43, 0.82)), url('../assets/gallery/pub-3.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(51, 48, 43, 0.82), rgba(51, 48, 43, 0.82)), url('../assets/images/garden.webp') center/cover no-repeat;
   color: var(--surface-raised);
 }
 
