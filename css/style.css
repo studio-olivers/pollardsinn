@@ -368,6 +368,12 @@ ul { list-style: none; }
   gap: 40px;
 }
 
+/* Three-up variant, used by the About page's "what we stand for". Set as a
+   class rather than inline so the responsive rules below can override it. */
+.pillars__grid--three {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .pillar {
   text-align: center;
   padding: 32px 16px;
@@ -633,68 +639,6 @@ ul { list-style: none; }
   font-size: 0.9rem;
   line-height: 1.6;
   text-align: center;
-}
-
-/* ============================================
-   MAILING LIST FORM (third-party embed)
-   ============================================ */
-.form-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.formbh {
-  width: 100%;
-  max-width: 800px;
-  margin-bottom: 40px;
-}
-
-/* The embed ships its own "Welcome to Pollards Inn!" h1; the section heading
-   above the form already does that job, and a second h1 on the page hurts more
-   than it helps. */
-.formbh .heading { display: none; }
-
-/* The Contacta script injects a bare form (no iframe), so it can be dressed to
-   match the site. Its submit button carries class "btn btn-primary", which
-   collides with our .btn and left black text on the vendor's near-black inline
-   background — !important below is only for out-fighting that inline style. */
-.formbh input:not([type="hidden"]),
-.formbh select,
-.formbh textarea {
-  box-sizing: border-box;
-  font-family: var(--font-body);
-  font-size: 1rem;
-  color: var(--text-body);
-  background: var(--white);
-  border: 1px solid var(--rule);
-  border-radius: 2px;
-  padding: 10px 12px;
-}
-
-.formbh input:focus,
-.formbh select:focus,
-.formbh textarea:focus {
-  outline: 2px solid var(--ochre);
-  outline-offset: 1px;
-}
-
-.formbh button[type="submit"] {
-  background-color: var(--ochre) !important;
-  border-color: var(--ochre) !important;
-  color: var(--white);
-  width: auto !important;
-  min-width: 154px;
-  line-height: normal !important;
-  padding: 16px 32px !important;
-  font-size: 0.82rem !important;
-  letter-spacing: 0.14em !important;
-  border-radius: 2px !important;
-}
-
-.formbh button[type="submit"]:hover {
-  background-color: var(--ochre-dark) !important;
-  border-color: var(--ochre-dark) !important;
 }
 
 /* ============================================
@@ -1123,7 +1067,8 @@ body.lightbox-open { overflow: hidden; }
    RESPONSIVE
    ============================================ */
 @media (max-width: 1024px) {
-  .pillars__grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+  .pillars__grid,
+  .pillars__grid--three { grid-template-columns: repeat(2, 1fr); gap: 32px; }
   .contact-grid { grid-template-columns: 1fr; gap: 16px; }
   .footer__grid { grid-template-columns: 1fr 1fr; }
 }
@@ -1249,7 +1194,8 @@ body.lightbox-open { overflow: hidden; }
 
   .page-hero { height: 240px; padding-bottom: 36px; }
 
-  .pillars__grid { grid-template-columns: 1fr; max-width: 360px; margin: 0 auto; }
+  .pillars__grid,
+  .pillars__grid--three { grid-template-columns: 1fr; max-width: 360px; margin: 0 auto; }
   .contact-card { padding: 28px 20px; }
   .contact-card__value { font-size: 1rem; }
 
