@@ -11,7 +11,7 @@
 
 :root {
   /* Brand ------------------------------------------------- */
-  --graphite: #2F2F2F;
+  --graphite: #33302B;
   --soft-linen: #DFDED5;
   --parchment: #F1F0EC;
   --bright-snow: #F8F8F6;
@@ -19,14 +19,14 @@
   /* Roles. The greys are graphite mixed toward soft linen, so
      everything on the page comes back to the four brand colours. */
   --ink: var(--graphite);
-  --ink-soft: #494948;
-  --muted: #5F5F5A;
+  --ink-soft: #494741;
+  --muted: #5E5C56;
   --surface: var(--parchment);
   --surface-sink: var(--soft-linen);
   --surface-raised: var(--bright-snow);
-  --text-body: #3A3A37;
-  --text-light: #5F5F5A;
-  --rule: rgba(47, 47, 47, 0.14);
+  --text-body: #3A3732;
+  --text-light: #5E5C56;
+  --rule: rgba(51, 48, 43, 0.14);
   --font-heading: "caslonian-std-l", Georgia, "Times New Roman", serif;
   --font-body: "berthold-baskerville-pro", Baskerville, Georgia, serif;
   --max-w: 1280px;
@@ -249,7 +249,7 @@ ul { list-style: none; }
 .hero {
   position: relative;
   min-height: 100vh;
-  background: linear-gradient(rgba(47, 47, 47, 0.5), rgba(47, 47, 47, 0.6)), url('../assets/gallery/pub-1.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(51, 48, 43, 0.5), rgba(51, 48, 43, 0.6)), url('../assets/gallery/pub-1.jpg') center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -311,7 +311,7 @@ ul { list-style: none; }
    ============================================ */
 .page-hero {
   height: 320px;
-  background: linear-gradient(rgba(47, 47, 47, 0.6), rgba(47, 47, 47, 0.7)), url('../assets/gallery/pub-2.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(51, 48, 43, 0.6), rgba(51, 48, 43, 0.7)), url('../assets/gallery/pub-2.jpg') center/cover no-repeat;
   display: flex;
   align-items: flex-end;
   padding: 0 24px 56px;
@@ -611,7 +611,7 @@ ul { list-style: none; }
   width: auto;
   height: auto;
   margin: 0 auto;
-  box-shadow: 0 8px 32px rgba(47, 47, 47, 0.12);
+  box-shadow: 0 8px 32px rgba(51, 48, 43, 0.12);
 }
 
 .menu-panel__hint {
@@ -653,7 +653,7 @@ body.lightbox-open { overflow: hidden; }
   bottom: 0;
   left: 0;
   z-index: 300;
-  background: rgba(47, 47, 47, 0.94);
+  background: rgba(51, 48, 43, 0.94);
   opacity: 0;
   visibility: hidden;
   /* Visibility flips instantly on open and is held back until the fade has
@@ -826,7 +826,7 @@ body.lightbox-open { overflow: hidden; }
   background: var(--surface-raised);
   padding: 40px 28px;
   text-align: center;
-  box-shadow: 0 6px 30px rgba(47, 47, 47, 0.08);
+  box-shadow: 0 6px 30px rgba(51, 48, 43, 0.08);
 }
 
 .contact-card__icon {
@@ -908,7 +908,7 @@ body.lightbox-open { overflow: hidden; }
 .testimonial {
   text-align: center;
   padding: 96px 0;
-  background: linear-gradient(rgba(47, 47, 47, 0.82), rgba(47, 47, 47, 0.82)), url('../assets/gallery/pub-3.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(51, 48, 43, 0.82), rgba(51, 48, 43, 0.82)), url('../assets/gallery/pub-3.jpg') center/cover no-repeat;
   color: var(--surface-raised);
 }
 
