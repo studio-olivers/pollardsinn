@@ -20,6 +20,7 @@
   --navy-soft: #343830;
   --ochre: #B19769;
   --ochre-dark: #8F7949;
+  --ochre-light: #C6B18A;
   --text-body: #3C3F36;
   --text-light: #686B5F;
   --rule: rgba(34, 37, 30, 0.14);
@@ -117,10 +118,10 @@ ul { list-style: none; }
 
 .btn--ochre {
   background: var(--ochre);
-  color: var(--white);
+  color: var(--navy);
   border-color: var(--ochre);
 }
-.btn--ochre:hover { background: var(--ochre-dark); border-color: var(--ochre-dark); }
+.btn--ochre:hover { background: var(--ochre-light); border-color: var(--ochre-light); }
 
 .btn--navy {
   background: var(--navy);
@@ -210,14 +211,19 @@ ul { list-style: none; }
   font-size: 0.78rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--white);
+  color: var(--navy);
   background: var(--ochre);
   padding: 12px 22px;
   border-radius: 2px;
   transition: background 0.25s;
   justify-self: end;
 }
-.nav__cta:hover { background: var(--ochre-dark); }
+.nav__cta:hover { background: var(--ochre-light); }
+
+/* The panel copy of the CTA sits inside .nav__links, whose link colour
+   is more specific than .nav__cta — restate it so both read the same. */
+.nav__links a.nav__cta { color: var(--navy); }
+.nav__links a.nav__cta:hover { background: var(--ochre-light); color: var(--navy); }
 
 .nav__toggle {
   display: none;
