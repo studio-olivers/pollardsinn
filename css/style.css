@@ -915,54 +915,33 @@ body.lightbox-open { overflow: hidden; }
 /* ============================================
    TESTIMONIAL BAND
    ============================================ */
+/* A full-bleed band of the garden, left in full colour to bring some warmth
+   into the middle of the page. The facts sit on their own bar beneath it,
+   because light text over an unscrimmed photograph will not hold contrast. */
 .testimonial {
-  text-align: center;
-  padding: 96px 0;
-  background: linear-gradient(rgba(51, 48, 43, 0.82), rgba(51, 48, 43, 0.82)), url('../assets/images/garden.webp') center/cover no-repeat;
-  color: var(--surface-raised);
+  height: clamp(300px, 42vw, 460px);
+  background: url('../assets/images/garden.webp') center/cover no-repeat;
 }
 
-.testimonial__quote {
-  font-family: var(--font-heading);
-  font-size: clamp(1.2rem, 2.6vw, 1.7rem);
-  font-weight: 300;
-  letter-spacing: 0.04em;
-  line-height: 1.45;
-  max-width: 820px;
-  margin: 0 auto 20px;
-}
-
-.testimonial__quote::before { content: '\201C'; }
-.testimonial__quote::after { content: '\201D'; }
-
-/* The strip currently carries facts, not a quotation, so it drops the
-   quote marks. Remove this modifier when a real review goes back in. */
-.testimonial__quote--facts::before,
-.testimonial__quote--facts::after { content: none; }
-
-.testimonial__author {
-  font-family: var(--font-body);
-  font-size: 0.82rem;
-  font-weight: 400;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.75);
-}
-
-.testimonial__link {
-  display: inline-block;
-  margin-top: 18px;
-  font-family: var(--font-body);
-  font-size: 0.82rem;
-  font-weight: 400;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+.factbar {
+  background: var(--surface-sink);
   color: var(--ink);
-  text-decoration: underline;
-  text-underline-offset: 4px;
+  text-align: center;
+  padding: 26px 20px;
 }
 
-.testimonial__link:hover { color: var(--surface-raised); }
+.factbar__text {
+  font-family: var(--font-heading);
+  font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  margin: 0;
+}
+
+/* A real review block goes back here once there are five-star Google
+   reviews from after the reopening. It will want its own styles; the old
+   ones assumed light text over a scrimmed photograph, which is not how
+   this band works any more. */
 
 /* ============================================
    CTA BAND
