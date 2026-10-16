@@ -12,20 +12,21 @@
 :root {
   /* Brand ------------------------------------------------- */
   --graphite: #33302B;
-  --soft-linen: #DFDED5;
-  --parchment: #F1F0EC;
+  --bone: #D4D2C4;
+  --parchment: #EEECE8;
   --bright-snow: #F8F8F6;
 
-  /* Roles. The greys are graphite mixed toward soft linen, so
-     everything on the page comes back to the four brand colours. */
+  /* Roles. The greys are graphite mixed toward bone, so everything
+     on the page comes back to the four brand colours. Muted is held
+     dark enough to clear 4.5:1 on bone, the darkest light surface. */
   --ink: var(--graphite);
-  --ink-soft: #494741;
-  --muted: #5E5C56;
+  --ink-soft: #48453F;
+  --muted: #5B5851;
   --surface: var(--parchment);
-  --surface-sink: var(--soft-linen);
+  --surface-sink: var(--bone);
   --surface-raised: var(--bright-snow);
-  --text-body: #3A3732;
-  --text-light: #5E5C56;
+  --text-body: #393631;
+  --text-light: #5B5851;
   --rule: rgba(51, 48, 43, 0.14);
   --font-heading: "caslonian-std-l", Georgia, "Times New Roman", serif;
   --font-body: "berthold-baskerville-pro", Baskerville, Georgia, serif;
@@ -150,7 +151,7 @@ ul { list-style: none; }
   right: 0;
   z-index: 100;
   height: var(--nav-h);
-  background: rgba(241, 240, 236, 0.96);
+  background: rgba(238, 236, 232, 0.96);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--rule);
   display: flex;
