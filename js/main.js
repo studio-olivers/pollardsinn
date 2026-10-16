@@ -49,6 +49,12 @@
     if (select) {
       select.addEventListener('change', function () { show(select.value); });
     }
+
+    // Deep links from elsewhere on the site, e.g. food-and-drink.html#festive
+    var fromHash = location.hash.replace('#', '');
+    if (fromHash && viewer.querySelector('.menu-panel[data-menu="' + fromHash + '"]')) {
+      show(fromHash);
+    }
   }
 
   // Lightbox for menu pages and gallery photos. The markup keeps its plain
