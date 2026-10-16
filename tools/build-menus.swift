@@ -14,6 +14,9 @@ struct Menu: Decodable {
     let pdf: String
     let pages: [Int]
     let alt: String
+    // Short description shown under the pages. Already HTML, so entities
+    // like &pound; are passed through rather than escaped.
+    let summary: String?
 }
 
 let WIDTHS = [1200, 2400]      // srcset widths, longest edge in px
@@ -140,7 +143,7 @@ for (index, menu) in menus.enumerated() {
     panels.append("""
           <div class="menu-panel\(isFirst ? " active" : "")" data-menu="\(menu.slug)">
     \(images.joined(separator: "\n"))
-            <p class="menu-panel__hint">Tap any page to open it full size.</p>
+            <p class="menu-panel__hint">Tap any page to open it full size.</p>\(menu.summary.map { "\n            <p class=\"menu-panel__summary\">\($0)</p>" } ?? "")
           </div>
     """)
 }

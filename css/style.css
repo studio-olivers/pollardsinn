@@ -615,6 +615,26 @@ ul { list-style: none; }
   font-style: italic;
 }
 
+.menu-panel__summary {
+  max-width: 62ch;
+  margin: 18px auto 0;
+  color: var(--text-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  text-align: center;
+}
+
+.menu-allergens {
+  max-width: 68ch;
+  margin: 32px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--rule);
+  color: var(--text-light);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
 /* ============================================
    MAILING LIST FORM (third-party embed)
    ============================================ */
