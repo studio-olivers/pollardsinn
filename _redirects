@@ -1,0 +1,37 @@
+# Cloudflare Pages redirects
+# Destinations are extensionless — Pages already maps /about.html → /about
+# and a rule to .html would 301/308 loop.
+
+# Duplicate / retired About
+/about-2 /about 301
+/about-2/ /about 301
+
+# Food & drink
+/dining /food-and-drink 301
+/dining/ /food-and-drink 301
+/festive /food-and-drink 301
+/festive/ /food-and-drink 301
+
+# Contact
+/contact-us /contact 301
+/contact-us/ /contact 301
+
+# Gatherings / private hire
+/gathering /gatherings 301
+/gathering/ /gatherings 301
+
+# What's on
+/events /whats-on 301
+/events/ /whats-on 301
+/socialising /whats-on 301
+/socialising/ /whats-on 301
+
+# Retired local SEO / WordPress leftovers
+/pub-in-northwich / 301
+/pub-in-northwich/ / 301
+/hello-world / 301
+/hello-world/ / 301
+/category/uncategorised / 301
+/category/uncategorised/ / 301
+/author/matt / 301
+/author/matt/ / 301
