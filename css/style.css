@@ -366,7 +366,7 @@ ul { list-style: none; }
 .pillars__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
+  gap: 56px 40px;
 }
 
 /* Three-up variant, used by the About page's "what we stand for". Set as a
@@ -377,24 +377,9 @@ ul { list-style: none; }
 
 .pillar {
   text-align: center;
-  padding: 32px 16px;
-}
-
-.pillar__icon {
-  width: 84px;
-  height: 84px;
-  margin: 0 auto 20px;
-  border-radius: 50%;
-  overflow: hidden;
-  background: var(--surface-sink);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.pillar__icon img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  /* The 32px vertical padding was holding an 84px icon off the title.
+     Without it the cells are short and the row gap did the rest. */
+  padding: 0 16px;
 }
 
 .pillar__title {
@@ -1059,8 +1044,10 @@ body.lightbox-open { overflow: hidden; }
    RESPONSIVE
    ============================================ */
 @media (max-width: 1024px) {
-  .pillars__grid,
-  .pillars__grid--three { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+  .pillars__grid { grid-template-columns: repeat(2, 1fr); gap: 48px 32px; }
+  /* Three items in a two-column grid orphans the last one. They are
+     text only now, so they stay three-up until the phone breakpoint. */
+  .pillars__grid--three { grid-template-columns: repeat(3, 1fr); gap: 32px; }
   .contact-grid { grid-template-columns: 1fr; gap: 16px; }
   .footer__grid { grid-template-columns: 1fr 1fr; }
 }
