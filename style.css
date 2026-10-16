@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------
-   Pollards Inn, Willaston — coming soon
+   Pollards Inn, Willaston — stop-gap holding page
    --------------------------------------------------------- */
 
 :root {
@@ -76,7 +76,7 @@ body {
   text-indent: 0.32em;
 }
 
-/* Hairline rule between the headline and the recruiting line */
+/* Hairline rule between the headline and what follows */
 .headline::after {
   content: "";
   display: block;
@@ -94,13 +94,54 @@ body {
   letter-spacing: 0.01em;
 }
 
+.note {
+  margin: 2.75rem auto 0;
+  max-width: 34ch;
+  font-size: clamp(0.875rem, 2vw, 0.95rem);
+  color: rgba(40, 40, 40, 0.74);
+}
+
 .nowrap {
   white-space: nowrap;
 }
 
-/* A link can be dropped straight into .lede later ---------- */
+/* Book a table ------------------------------------------- */
 
-.lede a {
+.cta {
+  display: inline-block;
+  margin: 2.25rem 0 0;
+  padding: 1.05rem 2.5rem;
+  border: 1px solid var(--charcoal);
+  border-radius: 1px;
+  background-color: var(--charcoal);
+  color: var(--stone);
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: clamp(0.8rem, 2.2vw, 0.9rem);
+  line-height: 1;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.18em;
+  /* optical centring against the tracking on the last letter */
+  text-indent: 0.18em;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.cta:hover,
+.cta:focus-visible {
+  background-color: transparent;
+  color: var(--charcoal);
+}
+
+.cta:focus-visible {
+  outline: 2px solid var(--charcoal);
+  outline-offset: 3px;
+}
+
+/* Inline links ------------------------------------------- */
+
+.lede a,
+.note a {
   color: inherit;
   text-decoration: none;
   border-bottom: 1px solid rgba(40, 40, 40, 0.4);
@@ -109,7 +150,9 @@ body {
 }
 
 .lede a:hover,
-.lede a:focus-visible {
+.lede a:focus-visible,
+.note a:hover,
+.note a:focus-visible {
   border-bottom-color: var(--charcoal);
 }
 
@@ -129,6 +172,10 @@ body {
     letter-spacing: 0.26em;
     text-indent: 0.26em;
   }
+
+  .cta {
+    padding: 1rem 2rem;
+  }
 }
 
 /* Motion --------------------------------------------------- */
@@ -140,7 +187,8 @@ body {
 
   .logo      { animation-delay: 0.05s; }
   .headline  { animation-delay: 0.2s; }
-  .lede      { animation-delay: 0.35s; }
+  .cta       { animation-delay: 0.35s; }
+  .note      { animation-delay: 0.5s; }
 }
 
 @keyframes rise {
