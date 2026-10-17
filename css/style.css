@@ -1202,6 +1202,12 @@ body.lightbox-open { overflow: hidden; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
 
   .footer__grid { grid-template-columns: 1fr; gap: 36px; }
+
+  /* The column goes full width here, and a 300px lockup lands just short
+     of the text under it, which reads as a misalignment rather than a
+     size. Smaller, so its left edge aligns and the right is clearly a
+     deliberate stop. */
+  .footer__brand img { max-width: 220px; }
   .footer__bottom { flex-direction: column; text-align: center; }
 
   .testimonial { padding: 72px 0; }
