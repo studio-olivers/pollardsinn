@@ -943,13 +943,21 @@ body.lightbox-open { overflow: hidden; }
 /* ============================================
    TESTIMONIAL BAND
    ============================================ */
-/* A full-bleed band of the garden, left in full colour to bring some warmth
-   into the middle of the page. The facts sit on their own bar beneath it,
-   because light text over an unscrimmed photograph will not hold contrast. */
-.testimonial {
-  height: clamp(300px, 42vw, 460px);
-  background: url('../assets/images/garden.webp') center/cover no-repeat;
+/* Full-bleed letterbox bands, left in full colour. They break up runs of
+   sections that would otherwise share a background and read as one slab.
+   No text sits on them, so they need no scrim. */
+.band {
+  height: clamp(220px, 28vw, 340px);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
+
+.band--garden  { background-image: url('../assets/images/garden.webp'); }
+.band--terrace { background-image: url('../assets/images/covered-terrace.webp'); }
+.band--lamp    { background-image: url('../assets/images/detail-lamp.avif'); }
+.band--rope    { background-image: url('../assets/images/detail-rope.avif'); }
+.band--play    { background-image: url('../assets/images/play-area.avif'); }
 
 .factbar {
   background: var(--surface-sink);
@@ -1242,8 +1250,6 @@ body.lightbox-open { overflow: hidden; }
      deliberate stop. */
   .footer__brand img { max-width: 220px; }
   .footer__bottom { flex-direction: column; text-align: center; }
-
-  .testimonial { padding: 72px 0; }
 }
 
 .legal {
