@@ -46,9 +46,20 @@ guard let menus = try? JSONDecoder().decode([Menu].self, from: manifestData), !m
 
 // ---------------------------------------------------------------- rendering
 
+// Print artwork carries bleed and printer's marks outside the trim, so render
+// the TrimBox when the page has one. PDFKit reports the MediaBox for PDFs that
+// define no TrimBox, so plain web exports are unaffected.
+func displayBox(for page: PDFPage) -> PDFDisplayBox {
+    let media = page.bounds(for: .mediaBox)
+    let trim = page.bounds(for: .trimBox)
+    let trimmed = trim.width < media.width - 0.5 || trim.height < media.height - 0.5
+    return trimmed ? .trimBox : .mediaBox
+}
+
 // Renders one PDF page at the given longest-edge size and writes a JPEG.
 func render(page: PDFPage, longestEdge: Int, to url: URL) -> Bool {
-    let rect = page.bounds(for: .mediaBox)
+    let box = displayBox(for: page)
+    let rect = page.bounds(for: box)
     let scale = Double(longestEdge) / Double(max(rect.width, rect.height))
     let pxW = Int((Double(rect.width) * scale).rounded())
     let pxH = Int((Double(rect.height) * scale).rounded())
@@ -67,7 +78,7 @@ func render(page: PDFPage, longestEdge: Int, to url: URL) -> Bool {
     cg.fill(CGRect(x: 0, y: 0, width: pxW, height: pxH))
     cg.scaleBy(x: CGFloat(scale), y: CGFloat(scale))
     cg.translateBy(x: -rect.origin.x, y: -rect.origin.y)
-    page.draw(with: .mediaBox, to: cg)
+    page.draw(with: box, to: cg)
     NSGraphicsContext.restoreGraphicsState()
 
     guard let data = rep.representation(using: .jpeg,
@@ -143,7 +154,7 @@ for (index, menu) in menus.enumerated() {
     panels.append("""
           <div class="menu-panel\(isFirst ? " active" : "")" data-menu="\(menu.slug)">
     \(images.joined(separator: "\n"))
-            <p class="menu-panel__hint">Tap any page to open it full size.</p>\(menu.summary.map { "\n            <p class=\"menu-panel__summary\">\($0)</p>" } ?? "")
+            <p class="menu-panel__hint">Tap any page to open it full size.</p>\(menu.summary.map { "\n        <p class=\"menu-panel__summary\">\($0)</p>" } ?? "")
           </div>
     """)
 }
@@ -155,11 +166,9 @@ let block = """
       <div class="menu-tabs" role="tablist">
 \(tabs.joined(separator: "\n"))
       </div>
-
       <select class="menu-select" aria-label="Choose menu">
 \(options.joined(separator: "\n"))
       </select>
-
 \(panels.joined(separator: "\n"))
       \(END)
 """
