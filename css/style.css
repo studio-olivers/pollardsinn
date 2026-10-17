@@ -661,7 +661,9 @@ ul { list-style: none; }
 
 .signpost__icon {
   font-size: 2.25rem;
-  color: var(--muted);
+  /* Facebook's own blue. The card exists to send people there, so the mark
+     is doing recognition work rather than decoration. */
+  color: #1877F2;
 }
 
 .signpost__title {
