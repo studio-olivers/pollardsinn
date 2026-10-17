@@ -171,8 +171,11 @@ ul { list-style: none; }
 
 .nav__logo { display: flex; align-items: center; gap: 12px; justify-self: start; }
 .nav__logo img {
-  max-width: 300px;
-  width: 100%;
+  /* Sized by height, not width. The lockup is a stacked mark, so a width
+     cap let it grow taller than a fixed-height bar and spill out of it. */
+  max-height: calc(var(--nav-h) - 28px);
+  width: auto;
+  max-width: 100%;
   height: auto;
 }
 
@@ -1061,7 +1064,7 @@ body.lightbox-open { overflow: hidden; }
     gap: 12px;
   }
   .nav__logo { justify-self: auto; }
-  .nav__logo img { max-width: 180px; }
+  .nav__logo img { max-width: 180px; }   /* secondary guard; height still governs */
   .nav__cta { display: none; }
   .nav__toggle { display: flex; }
 
