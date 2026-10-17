@@ -11,7 +11,7 @@
 
 :root {
   /* Brand ------------------------------------------------- */
-  --graphite: #33302B;
+  --graphite: #2C2924;
   --bone: #D4D2C4;
   --parchment: #EEECE8;
   --bright-snow: #F8F8F6;
@@ -20,14 +20,14 @@
      on the page comes back to the four brand colours. Muted is held
      dark enough to clear 4.5:1 on bone, the darkest light surface. */
   --ink: var(--graphite);
-  --ink-soft: #48453F;
-  --muted: #5B5851;
+  --ink-soft: #423F39;
+  --muted: #54524A;
   --surface: var(--parchment);
   --surface-sink: var(--bone);
   --surface-raised: var(--bright-snow);
-  --text-body: #393631;
-  --text-light: #5B5851;
-  --rule: rgba(51, 48, 43, 0.14);
+  --text-body: #33302A;
+  --text-light: #54524A;
+  --rule: rgba(44, 41, 36, 0.14);
   --font-heading: "caslonian-std-l", Georgia, "Times New Roman", serif;
   --font-body: "berthold-baskerville-pro", Baskerville, Georgia, serif;
   --max-w: 1280px;
@@ -616,7 +616,7 @@ ul { list-style: none; }
   width: auto;
   height: auto;
   margin: 0 auto;
-  box-shadow: 0 8px 32px rgba(51, 48, 43, 0.12);
+  box-shadow: 0 8px 32px rgba(44, 41, 36, 0.12);
 }
 
 .menu-panel__hint {
@@ -658,7 +658,7 @@ body.lightbox-open { overflow: hidden; }
   bottom: 0;
   left: 0;
   z-index: 300;
-  background: rgba(51, 48, 43, 0.94);
+  background: rgba(44, 41, 36, 0.94);
   opacity: 0;
   visibility: hidden;
   /* Visibility flips instantly on open and is held back until the fade has
@@ -831,7 +831,7 @@ body.lightbox-open { overflow: hidden; }
   background: var(--surface-raised);
   padding: 40px 28px;
   text-align: center;
-  box-shadow: 0 6px 30px rgba(51, 48, 43, 0.08);
+  box-shadow: 0 6px 30px rgba(44, 41, 36, 0.08);
 }
 
 .contact-card__icon {
