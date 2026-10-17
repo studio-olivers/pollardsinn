@@ -956,7 +956,6 @@ body.lightbox-open { overflow: hidden; }
 .band--garden  { background-image: url('../assets/images/garden.webp'); }
 .band--terrace { background-image: url('../assets/images/covered-terrace.webp'); }
 .band--lamp    { background-image: url('../assets/images/detail-lamp.avif'); }
-.band--rope    { background-image: url('../assets/images/detail-rope.avif'); }
 .band--play    { background-image: url('../assets/images/play-area.avif'); }
 
 .factbar {
