@@ -15,7 +15,7 @@ const path = require('path');
 
 const DIR = __dirname;
 const SOURCE = 'index.html';
-const PAGES = ['index.html', 'about.html', 'food-and-drink.html', 'contact.html', 'privacy.html'];
+const PAGES = ['index.html', 'about.html', 'food-and-drink.html', 'whats-on.html', 'contact.html', 'privacy.html'];
 
 const BLOCKS = [
   { name: 'nav', start: /<!-- SHARED NAV\b[^>]*-->/, end: /<!-- \/SHARED NAV -->/ },

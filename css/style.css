@@ -646,6 +646,39 @@ ul { list-style: none; }
 }
 
 /* ============================================
+   SIGNPOST CARD
+   ============================================ */
+
+.signpost {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 48px 32px;
+  text-align: center;
+  background: var(--surface-raised);
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+}
+
+.signpost__icon {
+  font-size: 2.25rem;
+  color: var(--muted);
+}
+
+.signpost__title {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--ink);
+  margin: 18px 0 0;
+}
+
+.signpost__body {
+  max-width: 44ch;
+  margin: 14px auto 28px;
+  color: var(--text-body);
+}
+
+/* ============================================
    LIGHTBOX
    ============================================ */
 /* Sits above the nav (100), its overlay (150) and the mobile nav panel (200). */
