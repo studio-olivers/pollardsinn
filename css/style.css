@@ -253,7 +253,11 @@ ul { list-style: none; }
 .hero {
   position: relative;
   min-height: 100vh;
-  background: linear-gradient(rgba(51, 48, 43, 0.66), rgba(51, 48, 43, 0.76)), url('../assets/images/exterior-front.avif') center/cover no-repeat;
+  /* Multiplied rather than veiled. A flat alpha scrim pulls every pixel
+     toward its own grey; multiplying by a warm tone darkens the photograph
+     while the colour in it survives. Darker at the foot, where the text is. */
+  background: linear-gradient(#857E6D, #5F594C), url('../assets/images/exterior-front.avif') center/cover no-repeat;
+  background-blend-mode: multiply;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -315,7 +319,10 @@ ul { list-style: none; }
    ============================================ */
 .page-hero {
   height: 320px;
-  background: linear-gradient(rgba(51, 48, 43, 0.30), rgba(51, 48, 43, 0.88)), url('../assets/images/exterior-garden-side.webp') center/cover no-repeat;
+  /* Multiplied, like the hero, so the photograph keeps its colour. Light
+     at the head, dark at the foot where the title sits. */
+  background: linear-gradient(#C2BCAE 0%, #8A8477 38%, #3A362E 100%), url('../assets/images/exterior-garden-side.webp') center/cover no-repeat;
+  background-blend-mode: multiply;
   display: flex;
   align-items: flex-end;
   padding: 0 24px 56px;
