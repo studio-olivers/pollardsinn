@@ -3,3 +3,8 @@
 README.md
 _svgtest.html
 _cmp_png.png
+
+# Menu master artwork. Kept on disk so build-menus.sh still works, but out of
+# the repo: Cloudflare Pages has no ignore file and uploads everything in the
+# build output directory, so anything committed here is publicly downloadable.
+menus/source/
