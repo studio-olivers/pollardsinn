@@ -3,6 +3,8 @@
     "summary": "Starters, pub classics, burgers, 28-day aged steaks, pies made in our kitchen and desserts. Light bites served until 5pm." },
   { "slug": "sunday",    "label": "Sunday Lunch",  "pdf": "sunday-menu.pdf",       "pages": [1], "alt": "Pollards Inn Sunday lunch menu",
     "summary": "Roast topside of beef, porchetta, leg of lamb, chicken supreme or cranberry and pistachio nut roast, all with Yorkshire pudding and proper gravy." },
+  { "slug": "childrens", "label": "Children's",    "pdf": "childrens-menu.pdf",    "pages": [1], "alt": "Pollards Inn children's menu",
+    "summary": "Main course and dessert for &pound;9.95, for children of eleven and under. Stone baked margherita pizza, sausage and mash, buttermilk chicken, fish fingers or tomato spaghetti, then an ice lolly or a ball of ice cream." },
   { "slug": "festive",   "label": "Festive",       "pdf": "festive-menu.pdf",      "pages": [1], "alt": "Pollards Inn festive menu",
     "summary": "2 courses &pound;25.95, 3 courses &pound;29.95. Monday 23 November to Thursday 24 December 2026. Group bookings welcome." },
   { "slug": "christmas", "label": "Christmas Day", "pdf": "christmas-day-menu.pdf","pages": [1], "alt": "Pollards Inn Christmas Day menu",
