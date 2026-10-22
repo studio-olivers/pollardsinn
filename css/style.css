@@ -1210,12 +1210,14 @@ body.lightbox-open { overflow: hidden; }
   body.nav-open { overflow: hidden; }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 900px) {
+  /* Five menus no longer fit on one row. The tab row wraps below about
+     820px and strands the last label on a line of its own, so the select
+     takes over here rather than at 640px. A sixth menu would need this
+     raised again, or the labels shortened. */
   .menu-tabs { display: none; }
   .menu-select { display: block; }
-}
 
-@media (max-width: 900px) {
   .hire-grid { grid-template-columns: 1fr; }
   .contact-split { grid-template-columns: 1fr; gap: 48px; }
   .map { aspect-ratio: 4 / 3; }
